@@ -1,15 +1,32 @@
+import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]) {
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Wprowadz liczbe trawy: ");
+        int grassNumber = scanner.nextInt();
+        System.out.print("Wprowadz liczbe mniszkow lekarskich: ");
+        int dandelionNumber = scanner.nextInt();
+        System.out.print("Wprowadz liczbe mniszkow owiec: ");
+        int sheepNumber = scanner.nextInt();
+        System.out.print("Wprowadz liczbe muchomorow: ");
+        int toadstoolNumber = scanner.nextInt();
+        System.out.print("Wprowadz liczbe wilkow: ");
+        int wolfNumber = scanner.nextInt();
+
+
+
         World world = new World(10, 10);
         OrganismFactory factory = new OrganismFactory();
 
+        /*
         int grassNumber = 3;
         int dandelionNumber = 3;
         int sheepNumber = 3;
         int toadstoolNumber = 3;
         int wolfNumber = 3;
+        */
 
         for (int i = 0; i < grassNumber; i++) {
             world.addOrganism(factory.createOrganism(Species.GRASS, world.getRandomFreePosition()));
